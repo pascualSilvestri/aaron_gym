@@ -6,22 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static "css/style_global.css" %}">
-    <title>Aaron Gym{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "css/base/nav.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <title>Aaron Gym | {% block title %}{% endblock %}</title>
 </head>
 <body>
-    <nav>
+    <nav class='nav_base'>
         <div class="logo"><img src="" alt="" class="img_logo">Aaron GYM</div>
         <ul class="ul_nav">
-            <li class="li_nav"><a href="" class="a_nav">Home</a></li>
+            <li class="li_nav"><a href="{% url 'home' %}" class="a_nav">Home</a></li>
             <li class="li_nav"><a href="" class="a_nav">Rutinas</a></li>
         </ul>
         <ul class="ul_nav_inicio_sesion">
-            <li class="li_nav"><a href="" class="a_nav">Iniciar sesion</a></li>
-        </ul>
+        {% if user.is_authenticated %}
+            <li class="li_sesion cerrar"><a class="a_nav_sesion" href="{% url 'logout' %}">Cerrar Sesión</a></li>
+        {% else %}
+            <li class="li_sesion"><a href="{% url 'login' %}" class="a_nav_sesion">Iniciar sesion</a></li>
+        {% endif %}
+        <ul class="ul_nav_inicio_sesion">
+        
     </nav>
+    {% block contenedor %}
+    {% endblock %} 
 
     <footer> Desarrollado por Pascual Silvestri telf:3624297648</footer>
-
-    
 </body>
 </html>
