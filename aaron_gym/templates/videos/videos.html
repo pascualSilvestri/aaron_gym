@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block title %}Videos{% endblock %} 
+
+{% block contenedor %}
+
+<div class="card_video">
+
+{% for i in videos %}
+
+    <div class="contenedorNoticia">
+        
+        <a href="{{i.url}}" target="_blank" rel="noopener noreferrer"><img src="{{i.img.url}}" alt='Videos pecho'></a> 
+        <h1>
+            {{i.titulo}}
+        </h1>
+        <h2>{{i.descripcion}}</h2>
+    </div>
+    
+{% endfor %}
+
+</div>
+
+
+{% endblock  %}

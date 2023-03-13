@@ -8,6 +8,17 @@ nav{
     padding:0 2rem;
 }
 
+.log{
+    width:25%;
+    height: 100%;
+    padding: 0.2rem 0 ;
+}
+
+.img_logo{
+    height: 100%;
+    width: 20%;
+}
+
 .ul_nav{
     width: 50%;
     height: 100%;
@@ -43,5 +54,15 @@ li{
 }
 
 .ul_nav_inicio_sesion{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.a_nav_sesion{
+    color: #b1b1b1;
+    font-weight: 900;
+    font-size: 1.2rem;
 }

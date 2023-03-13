@@ -14,19 +14,26 @@
 </head>
 <body>
     <nav class='nav_base'>
-        <div class="logo"><img src="" alt="" class="img_logo">Aaron GYM</div>
+        <div class="logo">
+            <img src="{% static 'img/logo_arongym.png' %}" alt="" class="img_logo">
+        </div>
         <ul class="ul_nav">
             <li class="li_nav"><a href="{% url 'home' %}" class="a_nav">Home</a></li>
-            <li class="li_nav"><a href="" class="a_nav">Rutinas</a></li>
+            {% if user.is_superuser %}
+            <li class="li_nav"><a href="{% url 'videos:videos' %}" class="a_nav">Rutinas</a></li>
+            {% endif %}  
         </ul>
         <ul class="ul_nav_inicio_sesion">
+        {% if user.is_superuser %}
+            <li class="li_sesion"><a href="{% url 'usuarios:registro' %}" class="a_nav_sesion">Registro</a></li>
+        {% endif %}  
         {% if user.is_authenticated %}
             <li class="li_sesion cerrar"><a class="a_nav_sesion" href="{% url 'logout' %}">Cerrar Sesión</a></li>
         {% else %}
             <li class="li_sesion"><a href="{% url 'login' %}" class="a_nav_sesion">Iniciar sesion</a></li>
         {% endif %}
-        <ul class="ul_nav_inicio_sesion">
         
+        <ul/>
     </nav>
     {% block contenedor %}
     {% endblock %} 
