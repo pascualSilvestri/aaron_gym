@@ -5,19 +5,19 @@
 
 {% block contenedor %}
 
-<div class="card_video">
-
+<div class="contenedor_videos">
+<div class="opacity"></div>
 {% for i in videos %}
 
-    <div class="contenedorNoticia">
+    <div class="card_video">
         
         <a href="{{i.url}}" target="_blank" rel="noopener noreferrer"><img src="{{i.img.url}}" alt='Videos pecho'></a> 
-        <h1>
+        <h2>
             {{i.titulo}}
-        </h1>
-        <h2>{{i.descripcion}}</h2>
+        </h2>
+        <h4>{{i.descripcion}}</h4>
     </div>
-    
+
 {% endfor %}
 
 </div>

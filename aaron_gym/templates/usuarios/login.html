@@ -2,11 +2,19 @@
 {% load static %} 
 {% block title %}Login{% endblock%} 
 
+
 {% block contenedor %}
-<form method="POST">
-    {%csrf_token%} {{form.errors}}
-    <input type="text" name="username" placeholder="USUARIO" />
-    <input type="password" name="password" placeholder="PASSWORD" />
-    <input type="submit" name="" value="ENVIAR" />
-</form>
+<div class="container">
+    <div class="opacity"></div>
+    <div class="container_form">
+        <img class="img_login" src="{% static 'img/aron_gym.png' %}" alt="">
+        <form class="login_form" method="POST">
+            {%csrf_token%}
+             {% comment %} {{form.errors}} {% endcomment %}
+            <input class="login_input" type="text" name="username" placeholder="USUARIO" />
+            <input class="login_input" type="password" name="password" placeholder="PASSWORD" />
+            <input class="submit_input" type="submit" name="" value="Ingresar" />
+        </form>
+    </div>  
+</div>
 {% endblock %} 

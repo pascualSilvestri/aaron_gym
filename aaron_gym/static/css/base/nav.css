@@ -4,19 +4,22 @@ nav{
     align-items: center;
     height:4rem;
     width: 100%;
-    background-color: #111a;
+    background-color: #400;
     padding:0 2rem;
 }
 
-.log{
+.logo{
     width:25%;
     height: 100%;
-    padding: 0.2rem 0 ;
+    padding: 0.2rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .img_logo{
-    height: 100%;
     width: 20%;
+    width: 15%;
 }
 
 .ul_nav{
@@ -50,7 +53,7 @@ li{
 }
 
 .a_nav{
-    color:#888;
+    color:#fa0;
 }
 
 .ul_nav_inicio_sesion{
@@ -62,7 +65,7 @@ li{
 }
 
 .a_nav_sesion{
-    color: #b1b1b1;
+    color: #fa0;
     font-weight: 900;
     font-size: 1.2rem;
 }

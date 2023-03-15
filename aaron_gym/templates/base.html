@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static "css/style_global.css" %}">
     <link rel="stylesheet" href="{% static "css/base/nav.css" %}">
+    <link rel="stylesheet" href="{% static "css/videos/videos.css" %}">
+    <link rel="stylesheet" href="{% static "css/usuarios/login.css" %}">
+    <link rel="stylesheet" href="{% static "css/home/home.css" %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -15,11 +18,11 @@
 <body>
     <nav class='nav_base'>
         <div class="logo">
-            <img src="{% static 'img/logo_arongym.png' %}" alt="" class="img_logo">
+            <img src="{% static 'img/logo_arongym.png' %}" alt="logo" class="img_logo">
         </div>
         <ul class="ul_nav">
             <li class="li_nav"><a href="{% url 'home' %}" class="a_nav">Home</a></li>
-            {% if user.is_superuser %}
+            {% if user.is_authenticated %}
             <li class="li_nav"><a href="{% url 'videos:videos' %}" class="a_nav">Rutinas</a></li>
             {% endif %}  
         </ul>
