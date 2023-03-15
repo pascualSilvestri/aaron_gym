@@ -1,0 +1,45 @@
+.main_usuarios{
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../../img/fondo_videos.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.opacity {
+    width: 100%;
+    height: 100%;
+    background-color: #111c;
+    position: absolute;
+    top: 0;
+}
+
+.contenedor_usuarios{
+    width: 50%;
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background-color: #400;
+    border-radius: 20px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+    margin: 0.5rem 0;
+    border: 2px solid #000;
+    background-color: #333;
+}
+
+.cols{
+    color:#fa1;
+}

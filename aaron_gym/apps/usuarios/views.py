@@ -8,7 +8,13 @@ from .models import Usuario
 class Registro(CreateView):
 #FORMULARIO DJANGO
     form_class = RegistroForm
-    success_url = reverse_lazy('login')
+    success_url = reverse_lazy('home')
     template_name = 'usuarios/registro.html'    
 
 
+def usuario(request):
+    usuario = Usuario.objects.all()
+    
+    context = {'usuario':usuario}
+    
+    return render(request,'usuarios/usuarios.html',context)

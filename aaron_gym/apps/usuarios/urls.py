@@ -4,7 +4,6 @@ from . import views
 app_name = 'usuarios'
 
 urlpatterns = [
-    path('registro/', views.Registro.as_view(), name = 'registro'),
-
-    
+    path('', views.usuario, name = 'usuarios'),
+    path('registro/', views.Registro.as_view(), name = 'registro'), 
 ]

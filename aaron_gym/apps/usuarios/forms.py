@@ -6,7 +6,6 @@ from .models import Usuario
 class RegistroForm(UserCreationForm):
     first_name = forms.CharField(label='Nombre', required=True)
     last_name = forms.CharField(label='Apellido', required=True)
-    telf = forms.CharField(label='Telf', required=True)
     password1 = forms.CharField(label='Contraseña', widget=forms.PasswordInput, required=True)
     password2 = forms.CharField(label='Confirmar Contraseña', widget=forms.PasswordInput, required=True)
 
@@ -16,7 +15,6 @@ class RegistroForm(UserCreationForm):
             'first_name',
             'last_name',
             'username',
-            'telf',
             'password1',
             'password2'
         ]

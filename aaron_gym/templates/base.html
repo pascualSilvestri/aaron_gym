@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static "css/base/nav.css" %}">
     <link rel="stylesheet" href="{% static "css/videos/videos.css" %}">
     <link rel="stylesheet" href="{% static "css/usuarios/login.css" %}">
+    <link rel="stylesheet" href="{% static "css/usuarios/usuarios.css" %}">
     <link rel="stylesheet" href="{% static "css/home/home.css" %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,12 +24,14 @@
         <ul class="ul_nav">
             <li class="li_nav"><a href="{% url 'home' %}" class="a_nav">Home</a></li>
             {% if user.is_authenticated %}
-            <li class="li_nav"><a href="{% url 'videos:videos' %}" class="a_nav">Rutinas</a></li>
+            <li class="li_nav"><a href="{% url 'rutinas:rutinas' %}" class="a_nav">Rutinas</a></li>
+            <li class="li_nav"><a href="{% url 'videos:videos' %}" class="a_nav">Videos</a></li>
             {% endif %}  
         </ul>
         <ul class="ul_nav_inicio_sesion">
         {% if user.is_superuser %}
             <li class="li_sesion"><a href="{% url 'usuarios:registro' %}" class="a_nav_sesion">Registro</a></li>
+            <li class="li_sesion"><a href="{% url 'usuarios:usuarios' %}" class="a_nav_sesion">Socios</a></li>
         {% endif %}  
         {% if user.is_authenticated %}
             <li class="li_sesion cerrar"><a class="a_nav_sesion" href="{% url 'logout' %}">Cerrar Sesión</a></li>

@@ -3,9 +3,20 @@
 {% block title %}Registro{% endblock%}
 
 {% block contenedor %}
-<form class="form-registrar"  method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" class="btn-registrar" value="Confirmar"/>
-</form>
+<div class="container">
+    <div class="opacity"></div>
+    <div class="container_form">
+        <img class="img_login" src="{% static 'img/aron_gym.png' %}" alt="">
+        <form class="form-registrar login_form"  method="POST">
+            {% csrf_token %}
+            <input class="login_input" type="text" name="{{form.first_name.name}}" id="nombre" placeholder='NOMBRE'>
+            <input class="login_input" type="text" name="{{form.last_name.name}}" id="apellido" placeholder='APELLIDO'>
+            <input class="login_input" type="text" name="{{form.username.name}}" id="usuario" placeholder='USUARIO'>
+            <input class="login_input" type="password" name="{{form.password1.name}}" id="password1" placeholder='CONTRASEÑA'>
+            <input class="login_input" type="password" name="{{form.password2.name}}" id="password2" placeholder='REPETIR CONTRASEÑA'>
+            <input class="submit_input" type="submit" class="btn-registrar" value="Confirmar"/>
+        </form>
+    </div>  
+</div>
+
 {% endblock %}

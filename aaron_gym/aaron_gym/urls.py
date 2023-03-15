@@ -26,6 +26,7 @@ urlpatterns = [
     path('',views.home,name = 'home'),
     path('Usuario/',include('apps.usuarios.urls')),
     path('Videos/',include('apps.videos.urls')),
+    path('Rutinas/',include('apps.rutinas.urls')),
     
     
     path('login/',auth.LoginView.as_view(template_name='usuarios/login.html'),name='login'),
