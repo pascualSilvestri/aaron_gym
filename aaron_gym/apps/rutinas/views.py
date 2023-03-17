@@ -5,9 +5,20 @@ from django.contrib.auth.decorators import login_required
 from .models import Cuerpo, Categoria, Rutina
 from django.urls import reverse_lazy
 
-def rutinas_all(request):
-    rutinas = Rutina.objects.all()
+def categorias_all(request):
+    categoria = Categoria.objects.all()
     
-    context ={'rutinas':rutinas}
+    context ={
+        'categoria':categoria
+              }
               
     return render(request,'rutinas/rutinas.html',context)
+
+def rutinas_all(request,pk):
+    rutinas = Rutina.objects.all().filter(categoria = pk)
+    
+    context ={
+        'rutinas':rutinas
+              }
+              
+    return render(request,'rutinas/rutinasCategoria.html',context)

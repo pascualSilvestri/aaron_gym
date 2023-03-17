@@ -1,4 +1,4 @@
-.contenedor_videos{
+.contenedor_rutina{
     width: 100%;
     min-height: 80vh;
     display: flex;
@@ -18,34 +18,28 @@
     top:0;
 }
 
-.card_video{
+.card_rutina{
     width: 20%;
     max-width: 300px;
     min-width: 100px;
     min-height: 200px;
     max-height: 300px;
-    margin:1rem 0.5rem;
+    margin: 1rem .5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    color: #fa1;
-    box-shadow: 0 0 10px 5px #801;
+    box-shadow: 0 0 10px 5px #fa1;
     background:transparent;
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(20px);
     transition: all .3s ease-in;
     z-index: 10;
+    
 }
 
-.card_video a{
+.card_rutina a{
     text-decoration:none;
     font-weight: bold;
     color: #fa1;
     font-size: 2rem;
-}
-
-
-img{
-    width: 100%;
-    border-radius: 10px 10px 0 0 ;
 }

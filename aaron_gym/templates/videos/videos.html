@@ -7,15 +7,12 @@
 
 <div class="contenedor_videos">
 <div class="opacity"></div>
-{% for i in videos %}
+{% for i in categoria %}
 
     <div class="card_video">
         
-        <a href="{{i.url}}" target="_blank" rel="noopener noreferrer"><img src="{{i.img.url}}" alt='Videos pecho'></a> 
-        <h2>
-            {{i.titulo}}
-        </h2>
-        <h4>{{i.descripcion}}</h4>
+        <a href="{% url 'videos:videoCategoria' i.id %}"  rel="noopener noreferrer" id={{i.id}}>{{i.nombre}}</a> 
+        
     </div>
 
 {% endfor %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block title %}Videos{% endblock %} 
+
+{% block contenedor %}
+
+<div class="contenedor_videos_categoria">
+<div class="opacity"></div>
+{% for i in videos %}
+
+    <div class="card_video_categoria">
+        
+        <a href="{{i.url}}"  rel="noopener noreferrer" id={{i.id}}><img src="{{i.img.url}}" alt=""></a> 
+        <h2>{{i.titulo}}</h2>
+        
+    </div>
+
+{% endfor %}
+
+</div>
+
+
+{% endblock  %}

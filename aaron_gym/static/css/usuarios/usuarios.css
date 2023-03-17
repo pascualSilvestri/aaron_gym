@@ -3,10 +3,15 @@
     min-height: 90vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     background: url(../../img/fondo_videos.jpg) no-repeat center center;
     background-size: cover;
     position: relative;
+    padding-top: 1.5rem;
+}
+
+.titulo{
+    color:#fa1
 }
 
 .opacity {
@@ -38,6 +43,21 @@
     margin: 0.5rem 0;
     border: 2px solid #000;
     background-color: #333;
+}
+
+.row_titulo{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+    margin: 0.5rem 0;
+    border: 2px solid #000;
+    background-color: #fa1;
+   
+}
+
+.cols_titulo{
+    color: #400;
 }
 
 .cols{

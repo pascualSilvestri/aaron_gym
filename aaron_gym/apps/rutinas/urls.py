@@ -5,5 +5,6 @@ app_name = 'rutinas'
 
 
 urlpatterns = [
-      path('', views.rutinas_all, name = 'rutinas'),
+      path('', views.categorias_all, name = 'rutinas'),
+      path('Rutinas/<int:pk>', views.rutinas_all, name = 'rutinasCategoria'),
 ]
