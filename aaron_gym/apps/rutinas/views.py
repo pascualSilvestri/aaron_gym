@@ -16,9 +16,15 @@ def categorias_all(request):
 
 def rutinas_all(request,pk):
     rutinas = Rutina.objects.all().filter(categoria = pk)
-    
+    ban = True
+    cont = 0
+    for i in rutinas:
+        cont +=1
+    if cont == 0:
+        ban = False
     context ={
-        'rutinas':rutinas
+        'rutinas':rutinas,
+        'ban':ban
               }
               
     return render(request,'rutinas/rutinasCategoria.html',context)

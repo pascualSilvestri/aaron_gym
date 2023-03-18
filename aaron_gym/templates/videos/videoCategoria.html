@@ -7,6 +7,7 @@
 
 <div class="contenedor_videos_categoria">
 <div class="opacity"></div>
+{% if ban %}
 {% for i in videos %}
 
     <div class="card_video_categoria">
@@ -17,6 +18,10 @@
     </div>
 
 {% endfor %}
+{% else %}
+
+<h1 class="card_video">Por ahora no hay contenido en esta seccion</h1>
+{% endif %}
 
 </div>
 
