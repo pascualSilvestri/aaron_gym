@@ -2,8 +2,9 @@
 {% load static %} 
 {% block title %}Registro{% endblock%}
 
-{% block contenedor %}
 
+{% block contenedor %}
+{% if user.is_superuser %}
 <main class='main_usuarios'>
     <div class="opacity"></div>
     <div class="contenedor_usuarios">
@@ -36,10 +37,6 @@
         {% endfor %}
     </div>
 </main>
-
-
-      
-
-      
-
+{% endif %}
 {% endblock %}
+
