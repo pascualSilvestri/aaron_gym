@@ -6,6 +6,7 @@
 {% block contenedor %}
 <div class="contenedor_rutina">
 <div class="opacity"></div>
+{% if ban %}
 {% for i in rutinas %}
 
     <div class="card_rutina" >
@@ -13,9 +14,9 @@
     </div>
 
 {% endfor %}
-<div class="card_rutina" >
-    <a href="" >prueba</a>
-</div>
+{% else %}
 
+<h1 class="card_video">Por ahora no hay contenido en esta seccion</h1>
+{% endif %}
 </div>
 {% endblock  %}

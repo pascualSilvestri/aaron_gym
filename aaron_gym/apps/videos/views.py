@@ -19,6 +19,14 @@ def videosCategoria_all(request,pk):
     
     videos = Video.objects.all().filter(categoria = pk)
     
-    context = {'videos':videos}
+    ban = True
+    cont = 0
+    for i in videos:
+        cont +=1
+    if cont == 0:
+        ban = False
+    
+    context = {'videos':videos,
+               'ban':ban}
     
     return render(request,'videos/videoCategoria.html',context)
