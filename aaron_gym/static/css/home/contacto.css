@@ -1,0 +1,81 @@
+.contacto_home{
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 50px solid #400;
+    background-color: #333;
+}
+
+.contacto_home h2{
+    width: 50%;
+    padding: .5rem 0;
+    margin: 1rem 0;
+    border-radius: 20px;
+    background-color: #400;
+    box-shadow: 0 0 10px 10px #fa1;
+    color: #fa1;
+    text-align: center;
+}
+
+.container_info{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 1rem 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contacto_text{
+    display: flex;
+    width: 45%;
+    padding: 1rem 3rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:flex-start ;  
+    flex: 2;  
+}
+
+.contacto_text a{
+    width: auto;
+    height: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #400;
+    margin: 1rem 0;
+    border-radius: 20px;
+    padding: .2rem 1rem;
+    text-decoration: none;
+    color: #fa1;
+
+}
+
+.contacto_text a>img{
+    width: 3rem;
+    height: 100%;
+    margin: 0 1rem
+}
+.contacto_text a>p{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.qr{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    flex:1;
+}
+
+.img_qr{
+    max-width: 250px;
+    min-width: 100px;
+}

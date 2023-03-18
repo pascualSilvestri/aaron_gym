@@ -30,7 +30,7 @@
     align-items: center;
     border-radius: 10px;
     color: #fa1;
-    box-shadow: 0 0 10px 5px #801;
+    box-shadow: 0 0 10px 5px #fa1;
     background:transparent;
     backdrop-filter: blur(30px);
     transition: all .3s ease-in;
