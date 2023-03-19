@@ -33,6 +33,7 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        flex-direction: column;
     
     }
     .a_nav_sesion{
@@ -154,7 +155,7 @@
     }
 
     .menu{
-        width: 10%;
+        width: 20%;
         height: 100%;
         display: flex;
         padding-right: 1rem;

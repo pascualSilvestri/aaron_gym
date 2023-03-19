@@ -21,7 +21,9 @@
     border-radius: 20px;
     margin:.5rem 0
 }
-    
+.contacto_text a>p{
+    display: none;
+}
 
 }
 
@@ -91,6 +93,8 @@
         color: #fa1;
     
     }
+
+    
     .contacto_home h2{
         font-size: 1rem;
     }
