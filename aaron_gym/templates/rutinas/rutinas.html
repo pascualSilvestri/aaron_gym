@@ -11,7 +11,7 @@
 {% for i in categoria %}
 
     <div class="card_rutina" >
-        <a href="{% url 'rutinas:rutinasCategoria' i.id %}" id={{i.id}}>{{i.nombre}}</a>
+        <a id='{{i.id}}' href="{% url 'rutinas:rutinasCategoria' i.id %}" > {{i.nombre}}</a>
     </div>
 
 {% endfor %}

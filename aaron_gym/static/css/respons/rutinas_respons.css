@@ -8,7 +8,9 @@
 
 @media only screen and (max-width: 780px){
     
-    
+    body{
+        padding-top: 4rem;
+    }
     
 
 }
