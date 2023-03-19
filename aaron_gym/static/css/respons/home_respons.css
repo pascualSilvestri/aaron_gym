@@ -28,7 +28,11 @@
 }
 
 @media only screen and (max-width: 550px){
-    
+    .container_logo{
+        width: 50%;
+        height: 70%;
+        z-index: 10;
+    }
 
     .logo_principal{
         width: 100%;
@@ -36,6 +40,7 @@
         object-fit: contain;
     }
     .plan_mensual{
+        width: 60%;
        font-size: 1rem;
     
     }
@@ -115,8 +120,12 @@
         margin: 0;
         padding: 0;
     }
+    .ubicacion_text h3 {
+        font-size: 1rem;
+    }
 
     .ubicacion_home h2{
-        font-size: 1.5rem;
+        width: 60%;
+        font-size: 1rem;
     }
 }
