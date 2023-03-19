@@ -114,7 +114,9 @@
         width: 100%;
         margin: 0;
         padding: 0;
+    }
 
-
+    .ubicacion_home h2{
+        font-size: 1.5rem;
     }
 }

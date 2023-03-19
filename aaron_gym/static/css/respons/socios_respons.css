@@ -1,0 +1,35 @@
+
+@media only screen and (max-width: 1024px){
+
+    
+}
+
+
+
+@media only screen and (max-width: 780px){
+    
+    
+    
+
+}
+
+@media only screen and (max-width: 500px){
+    
+  
+    .contenedor_usuarios{
+        width: 90%;
+    }
+
+    .titulo{
+        font-size: 1.5rem;
+    }
+
+    .cols h2{
+        font-size: 1rem;
+       
+    }
+    
+    .cols_titulo h2{
+        font-size: 1rem;
+    }
+}
